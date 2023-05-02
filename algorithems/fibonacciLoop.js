@@ -34,6 +34,6 @@ const getFibonacci = (index) => {
 };
 
 console.time("test01");
-console.log(getFibonacci(2000000));
+console.log(getFibonacci(2000000)); // 34 second
 // console.log(getFibonacci(10));
 console.timeEnd("test01");
