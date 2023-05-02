@@ -2,6 +2,7 @@
 
 Def :- fibonacci is a sequence in which each number is the sum of the two preceding onces
 the first two numbers in the sequence are 0 and 1.
+BigO - O(n)
 
  */
 
