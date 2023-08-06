@@ -3,6 +3,7 @@ const { getSortedNumArray, getNumberAnswer } = require("../helper");
 const sortedArray = getSortedNumArray(-1000, 1000, 2);
 
 // TC: O(log(n))
+
 const binarySearchRecusive = (
   num,
   arr = [],
