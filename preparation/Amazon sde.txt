@@ -1,0 +1,4 @@
+--> programing into c++ or JAVA
+--> DSA 
+--> DBMS, OS, OOPS  <-- computer fundamental
+
