@@ -1,7 +1,7 @@
 const { getNumberAnswer } = require("../helper.js");
 
 // TC: O(n)
-const getFactoria = (num) => {
+const getFactorial = (num) => {
   let val = 1;
   if (num === 0) return val;
   if (num > 0) {
@@ -23,5 +23,7 @@ const getFactoria = (num) => {
   const res = await getNumberAnswer(
     "Enter positive number to find it's factorial"
   );
-  console.log(getFactoria(res));
+  console.time("test");
+  console.log(getFactorial(res));
+  console.timeEnd("test");
 })();

@@ -26,5 +26,15 @@ const getNumberAnswer = async (question) => {
 //   console.log(typeof res, "-->", res)
 // );
 
+const getSortedNumArray = (from, to, divider = 1) => {
+  const res = [];
+  while (from <= to) {
+    if (from % divider === 0) res.push(from);
+    from++;
+  }
+  return res;
+};
+
 module.exports.getAnswer = getAnswer;
 module.exports.getNumberAnswer = getNumberAnswer;
+module.exports.getSortedNumArray = getSortedNumArray;

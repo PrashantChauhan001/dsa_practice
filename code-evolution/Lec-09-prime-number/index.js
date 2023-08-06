@@ -1,6 +1,6 @@
 const { getNumberAnswer } = require("../helper");
 
-// TC: O(n)
+// TC: O(n^(1/2))
 const isPrimeNumber = (num) => {
   if (num < 2) return false;
   if (num % 1 !== 0) return false;
