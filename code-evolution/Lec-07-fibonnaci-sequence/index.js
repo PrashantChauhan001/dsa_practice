@@ -1,5 +1,6 @@
 const { getNumberAnswer } = require("../helper.js");
 
+// TC: O(n)
 async function getFibonacci() {
   const place = await getNumberAnswer(
     "Enter positive number to get fibonacci item of that place"
