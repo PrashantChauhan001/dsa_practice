@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./**/*.js"
+    "lint": "eslint ./**/*.js",
+    "tsc:codevol": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,8 @@
   },
   "homepage": "https://github.com/PrashantChauhan001/dsa_tasks#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0"
   }
 }

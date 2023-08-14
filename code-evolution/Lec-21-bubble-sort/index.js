@@ -2,25 +2,34 @@ const { getUnsortedArray, getNumberAnswer } = require("../helper");
 
 // TC: O(log(n))
 
-const bubbleSort = (sortedArray) => {
-  console.log(sortedArray);
-  return null;
+const bubbleSort = (unSortedArray) => {
+  let swap;
+  do {
+    swap = false;
+    for (let index = 0; index < unSortedArray.length - 1; index++) {
+      if (unSortedArray[index] > unSortedArray[index + 1]) {
+        const temp = unSortedArray[index];
+        unSortedArray[index] = unSortedArray[index + 1];
+        unSortedArray[index + 1] = temp;
+        swap = true;
+      }
+    }
+  } while (swap);
+  return unSortedArray;
 };
 
 (async () => {
-  const startIndex = await getNumberAnswer(
-    "Enter starting integer for the array"
+  const count = await getNumberAnswer("Enter length of the array");
+  let maxNumber = await getNumberAnswer(
+    "Enter maximum possible integer into the array"
   );
-  let endIndex = await getNumberAnswer("Enter last integer for the array");
-  while (endIndex <= startIndex) {
-    console.log("Last integer must be greter than start integer");
-    endIndex = await getNumberAnswer("Enter last integer for the array");
+  while (maxNumber <= 0) {
+    console.log("Max integer should be positive non-zero number");
+    maxNumber = await getNumberAnswer("Enter last integer for the array");
   }
-  const divider = await getNumberAnswer(
-    "Enter possible divider for the array element"
-  );
-  const sortedArray = getUnsortedArray(startIndex, endIndex, divider);
+  const unSortedArray = getUnsortedArray(count, maxNumber);
+  console.log(unSortedArray, "this is unsorted array");
   console.time("test");
-  console.log(bubbleSort(sortedArray));
+  console.log(bubbleSort(unSortedArray), "this is sorted now");
   console.timeEnd("test");
 })();

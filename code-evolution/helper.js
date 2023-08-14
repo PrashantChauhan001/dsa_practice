@@ -54,16 +54,14 @@ const getSortedNumArray = (from, to, divider = 1) => {
  * @param {Number} divider | number by which array item is divided
  * @returns {Array}
  */
-const getUnsortedArray = (from, to, divider = 1) => {
+const getUnsortedArray = (count, maxNumber) => {
   const res = [];
-  while (from <= to) {
-    if (from % divider === 0) {
-      if (Math.random() * 10 > 5) res.push(from);
-      else res.shift(from);
-      from++;
-    }
-    return res;
+  while (count > 0) {
+    const randomNumber = Math.ceil(Math.random() * maxNumber);
+    res.push(randomNumber * (Math.random() * 100 > 50 ? -1 : 1));
+    count--;
   }
+  return res;
 };
 
 module.exports.getAnswer = getAnswer;
