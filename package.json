@@ -1,0 +1,31 @@
+{
+  "name": "data-structure-and-algorithem",
+  "version": "1.0.0",
+  "description": "This repo is created to write algorithem and data structure code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrashantChauhan001/dsa_tasks.git"
+  },
+  "keywords": [
+    "dsa",
+    "data-structure",
+    "algorithem",
+    "dsa-with-javascript"
+  ],
+  "author": "Prashant Chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrashantChauhan001/dsa_tasks/issues"
+  },
+  "homepage": "https://github.com/PrashantChauhan001/dsa_tasks#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint": "^8.47.0"
+  }
+}
