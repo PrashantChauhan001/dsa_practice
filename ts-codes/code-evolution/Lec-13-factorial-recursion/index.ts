@@ -3,18 +3,12 @@ import { getNumberAnswer } from "../helper";
 // WTC: O(n)
 
 const getFactorial = (num: number): number => {
-  let factorial = 1;
-  while (num > 1) {
-    factorial *= num;
-    num--;
-  }
-  return factorial;
+  if (num <= 1) return 1;
+  return num * getFactorial(num - 1);
 };
 
 (async function () {
-  const num = await getNumberAnswer(
-    "Enter positive integer to get it's factorial"
-  );
+  const num = await getNumberAnswer("Enter positive number to get factorial");
   console.time("test");
   const res = getFactorial(num);
   console.log(res);

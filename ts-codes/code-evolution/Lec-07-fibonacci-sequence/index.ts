@@ -1,5 +1,7 @@
 import { getNumberAnswer } from "../helper";
 
+// WTC: O(n)
+
 const getFibonacci = (place: number): number[] => {
   if (place <= 1) return [0];
   const fibonacci: number[] = [0, 1];

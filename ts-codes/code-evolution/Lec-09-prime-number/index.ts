@@ -1,5 +1,7 @@
 import { getNumberAnswer } from "../helper";
 
+// WTC: O(n^(1/2))
+
 const isPrimeNumber = (num: number): boolean => {
   let root = Math.floor(Math.sqrt(num));
   let isPrimeNumber = true;
@@ -8,6 +10,7 @@ const isPrimeNumber = (num: number): boolean => {
       isPrimeNumber = false;
       break;
     }
+    root--;
   }
   return isPrimeNumber;
 };
