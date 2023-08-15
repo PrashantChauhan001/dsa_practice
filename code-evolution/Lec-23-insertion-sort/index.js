@@ -2,19 +2,19 @@ const { getUnsortedArray, getNumberAnswer } = require("../helper");
 
 // TC: O(log(n^2))
 
-const bubbleSort = (unSortedArray) => {
-  let swap;
-  do {
-    swap = false;
-    for (let index = 0; index < unSortedArray.length - 1; index++) {
-      if (unSortedArray[index] > unSortedArray[index + 1]) {
-        const temp = unSortedArray[index];
-        unSortedArray[index] = unSortedArray[index + 1];
-        unSortedArray[index + 1] = temp;
-        swap = true;
-      }
+const insertionSort = (unSortedArray) => {
+  if (unSortedArray.length < 2) return unSortedArray;
+  let arrayIndex = 1;
+  while (arrayIndex < unSortedArray.length) {
+    let currIndex = arrayIndex;
+    let currItem = unSortedArray[currIndex];
+    while (currIndex !== 0 && currItem < unSortedArray[currIndex - 1]) {
+      unSortedArray[currIndex] = unSortedArray[currIndex - 1];
+      currIndex--;
     }
-  } while (swap);
+    if (currIndex !== arrayIndex) unSortedArray[currIndex] = currItem;
+    arrayIndex++;
+  }
   return unSortedArray;
 };
 
@@ -30,6 +30,6 @@ const bubbleSort = (unSortedArray) => {
   const unSortedArray = getUnsortedArray(count, maxNumber);
   console.log(unSortedArray, "this is unsorted array");
   console.time("test");
-  console.log(bubbleSort(unSortedArray), "this is sorted now");
+  console.log(insertionSort(unSortedArray), "this is sorted now");
   console.timeEnd("test");
 })();

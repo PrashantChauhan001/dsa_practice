@@ -1,21 +1,22 @@
 const { getUnsortedArray, getNumberAnswer } = require("../helper");
 
-// TC: O(log(n^2))
+// WTC: O(log(n^2))
+// ATC: O(log(nlog(n)))
 
-const bubbleSort = (unSortedArray) => {
-  let swap;
-  do {
-    swap = false;
-    for (let index = 0; index < unSortedArray.length - 1; index++) {
-      if (unSortedArray[index] > unSortedArray[index + 1]) {
-        const temp = unSortedArray[index];
-        unSortedArray[index] = unSortedArray[index + 1];
-        unSortedArray[index + 1] = temp;
-        swap = true;
-      }
-    }
-  } while (swap);
-  return unSortedArray;
+const quickSort = (arr) => {
+  if (arr.length <= 1) return arr;
+  const middle = Math.floor(arr.length / 2) - (arr.length % 2 ? 1 : 0);
+  let pivot = arr[middle];
+  arr[middle] = null;
+  const leftArr = [];
+  const rightArr = [];
+  while (arr.length) {
+    let lastEle = arr.pop();
+    if (!lastEle) continue;
+    if (lastEle > pivot) rightArr.push(lastEle);
+    else leftArr.push(lastEle);
+  }
+  return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
 };
 
 (async () => {
@@ -30,6 +31,6 @@ const bubbleSort = (unSortedArray) => {
   const unSortedArray = getUnsortedArray(count, maxNumber);
   console.log(unSortedArray, "this is unsorted array");
   console.time("test");
-  console.log(bubbleSort(unSortedArray), "this is sorted now");
+  console.log(quickSort(unSortedArray), "this is sorted now");
   console.timeEnd("test");
 })();
