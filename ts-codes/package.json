@@ -1,0 +1,31 @@
+{
+  "name": "type-script-practice",
+  "version": "1.0.0",
+  "description": "This folder is used to practice type script with dsa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./**/*.js",
+    "eslint": "eslint --init",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PrashantChauhan001/dsa_practice.git"
+  },
+  "keywords": [
+    "type-script",
+    "dsa",
+    "dsa-with-ts"
+  ],
+  "author": "Prashant Chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrashantChauhan001/dsa_practice/issues"
+  },
+  "homepage": "https://github.com/PrashantChauhan001/dsa_practice#readme",
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6"
+  }
+}
