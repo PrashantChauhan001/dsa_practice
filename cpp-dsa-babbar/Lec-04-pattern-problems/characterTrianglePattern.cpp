@@ -84,4 +84,21 @@ int main()
     cout << endl;
     i = i + 1;
   }
+
+  cout << endl;
+
+  // write squre matrix with input column and row and fill with alphabet start with A and increase by row
+  i = 1;
+  while (i <= num)
+  {
+    int j = 1;
+    while (j <= num)
+    {
+      char character = 'A' + i + j - 2;
+      cout << " " << character << " ";
+      j++;
+    }
+    cout << endl;
+    i++;
+  }
 }
