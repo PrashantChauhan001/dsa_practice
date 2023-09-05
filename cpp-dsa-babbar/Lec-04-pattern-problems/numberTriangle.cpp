@@ -66,8 +66,7 @@ int main()
     {
       if (num - i + 1 >= num - j + 1)
       {
-        cout << " " << count << " ";
-        count++;
+        cout << " " << count++ << " ";
       }
       else
       {
@@ -90,8 +89,7 @@ int main()
     {
       if (num - i + 1 <= j)
       {
-        cout << " " << count << " ";
-        count++;
+        cout << " " << count++ << " ";
       }
       else
       {
