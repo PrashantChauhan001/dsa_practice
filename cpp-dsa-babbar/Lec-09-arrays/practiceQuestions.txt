@@ -1,0 +1,10 @@
+- swapAlternate element in array
+- find unique
+  - https://www.codingninjas.com/studio/problems/find-unique_625159?leftPanelTab=1
+- find duplicate
+- find intersection of two array
+  - https://leetcode.com/problems/intersection-of-two-arrays/solutions/3848157/easy-o-n-time-and-space-complexity-solution-in-cpp/
+- pair sum
+  - https://leetcode.com/problems/two-sum/
+- triplet sum
+  - https://leetcode.com/problems/3sum/
